@@ -1,0 +1,15 @@
+plc:
+  ip: "192.168.0.1"
+  cert: "/certs/client_cert.pem"
+  key: "/certs/client_key.pem"
+
+mqtt:
+  host: "mosquitto"
+  port: 1883
+  topic_prefix: "factory/cell1"
+
+tags:
+  - name: "MotorSpeed"
+    node_id: "ns=3;s=\"DB_Global\".\"MotorSpeed\""
+  - name: "Temperature"
+    node_id: "ns=3;s=\"DB_Data\".\"ActualTemp\""

@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  gateway:
+    build: .
+    volumes:
+      - ./config:/app/config
+      - ./certs:/app/certs
+    restart: always
+
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    ports:
+      - "1883:1883"
